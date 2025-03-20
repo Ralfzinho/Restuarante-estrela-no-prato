@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --cor-primaria: #0A1F44;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #ffc933;
+    --cor-hover: #1C3D71;
+    --fonte-primaria:'Poppins', sans-serif;
+    --fonte-secundaria:'Roboto', sans-serif;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fonte-secundaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.layout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.artigo-principal {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.barra_navegacao{
+    background-color:var(--cor-secundaria);
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    color: var(--cor-primaria);
+    list-style-type:none;
+    width: 100%;
+    margin-left: 20px;
+    
+}
+
+.logo_inicial{
+    border-radius: 100%;    
+    width: 60px; /* Ajuste o tamanho da logo */
+    height: auto;
+    margin-right: 10px; /* Espaçamento entre logo e texto */
+}
+
+.barra_navegacao_titulo{
+    margin-right: 20px;
+}
+
+.barra_navegacao_link{
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    color: var(--cor-primaria);
+    font-weight: bold
+}
+.barra_navegacao_link:hover{
+    color: var(--cor-terciaria);
+}
+
+.artigo_titulo{
+    font-family: var(--fonte-primaria);
+    font-size: larger;
+}
+
+.artigo_titulo_destaque{
+    font-family: var(--fonte-primaria);
+    font-size:x-large;
+    color: var(--cor-terciaria);
+}
+
+.botao{
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+    transition: color 0.8s ease;
+    font-family: var(--fonte-primaria);
+    text-transform: uppercase;
+    font: bold;
+}
+
+.botao:hover{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+.lista{
+    list-style-type:none;
+    margin: 10px;
+}
+
+.rodape{
+    background-color:var(--cor-secundaria);/* Cor de fundo do rodapé */
+    padding: 20px;
+    text-align:center; /* Centraliza o texto */
+    color: var(--cor-primaria);
+    
+}
+
+.rodape_lista{
+    list-style-type: none; /* Remove os símbolos da lista */
+}
+
+.linha_divisoria{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
+    }
+
+    .artigo-principal {
+        padding-right: 0; /* Remove o padding lateral */
+        padding-bottom: 20px; /* Adiciona espaçamento abaixo */
+    }
+
+    .barra_navegacao {
+        flex-direction: column; /* Muda a direção da barra de navegação para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .barra_navegacao_link {
+        margin: 5px 0; /* Ajusta as margens dos links */
+    }
+
+    .botao {
+        width: 100%; /* Botão ocupa toda a largura em telas pequenas */
+        margin: 5px 0; /* Ajusta margens */
+    }
+}
+
+@media (max-width: 480px) {
+    .artigo_titulo {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte do título */
+    }
+
+    .artigo_titulo_destaque {
+        font-size: 1.75rem; /* Diminui o tamanho da fonte do destaque */
+    }
+}
