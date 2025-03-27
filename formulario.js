@@ -1,5 +1,5 @@
 // Obtém referência ao formulário de contato pelo ID
-const form = document.getElementById("reservaForm");
+const form = document.getElementById("form-contato");
 
 // Adiciona um listener para o evento de submit do formulário
 form.addEventListener("submit", event => {
