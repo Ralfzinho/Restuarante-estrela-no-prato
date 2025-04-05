@@ -1,6 +1,12 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Dados recebidos:";
+    print_r($_POST);
+} else {
+    echo "Nada foi enviado.";
+}
 // CONEXÃO
-$host = 'amorously-cleansing-warthog.data-1.use1.tembo.ioT';
+$host = 'aamorously-cleansing-warthog.data-1.use1.tembo.io';
 $db   = 'reservas_restaurante';
 $user = 'postgres';
 $pass = 'yZEZAkuwUKfJmPD1';
