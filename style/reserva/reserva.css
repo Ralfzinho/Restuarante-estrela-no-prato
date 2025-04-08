@@ -10,69 +10,7 @@
 
 }
 
-
-
-.formulario-geral {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-}
-
-.formulario_titulo{
-    font-family: var(--fonte-primaria);
-    color:var(--cor-primaria);
-    margin-bottom: 15px;
-    margin-top: 10px;
-}
-
-.formulario_info {
-    margin-bottom: 20px;
-}
-
-.formulario_legenda {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color:var(--cor-primaria);
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.formulario_acao {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--cor-primaria);
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-textarea {
-    resize: none;
-}
-
-.formulario_opcao{
-   margin-left: 10px;
-}
-
-.formulario_botao{
-    background-color: var(--cor-primaria);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 100px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: background-color 0.8s ease;
-    transition: color 0.8s ease;
-    font-family: var(--fonte-primaria);
-    text-transform: uppercase;
-    font: bold;
-}
-
-.formulario_botao:hover {
-    background-color: var(--cor-terciaria);
-    color: var(--cor-primaria);
+.btn-custom{
+    background-color: #128C7E !important; 
+    color: white !important;
 }
