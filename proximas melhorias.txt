@@ -1,0 +1,44 @@
+1. Adicionar interatividade com JavaScript
+💡 Ideias práticas:
+Botão para alternar entre temas (claro/escuro) ✅
+Filtro de pratos por categoria (ex: entradas, pratos principais, sobremesas)
+Modal para mostrar detalhes de um prato ao clicar
+Campo de busca no cardápio com filtro em tempo real
+Validação de formulários de contato ou pedidos
+
+🔗 2. Integrar com um backend simples para simular pedidos
+💡 Sugestões:
+Usar PHP ou Node.js para criar um backend básico
+Criar uma tela de "Montar Pedido", onde o usuário escolhe os pratos
+Armazenar os pedidos com PHP + banco de dados (MySQL, SQLite) ou JSON local
+Exibir um resumo do pedido com cálculo do total
+
+🔐 3. Sistema de login para clientes
+💡 Ideias de funcionalidades:
+Cadastro de novos usuários com nome, e-mail e senha
+Login com autenticação simples (pode começar só em HTML/JS e depois fazer no backend)
+Áreas protegidas como “Meus Pedidos” ou “Perfil”
+Armazenar sessão com localStorage ou sessionStorage (no início)
+
+📱 4. Melhorar responsividade e UX em dispositivos móveis
+💡 Pontos importantes:
+Usar media queries para ajustar layout em celulares e tablets
+Tornar botões e links maiores para toque
+Ocultar/mostrar elementos de acordo com o tamanho da tela
+Usar ícones (como do Lucide ou Font Awesome) para menus e ações
+Menu hambúrguer para navegação no celular
+
+✨ 5. Adicionar animações suaves com CSS
+💡 Sugestões visuais:
+Fade-in nos elementos ao carregar a página
+Transições suaves em botões (hover, active)
+Animação ao adicionar itens no carrinho
+Efeitos em cards de pratos (zoom leve ou sombra ao passar o mouse)
+Use @keyframes para criar animações mais personalizadas
+
+🎁 Dica bônus – Coisas legais que você pode incluir:
+Página de contato com mapa do Google Maps embedado
+Avaliação de pratos com estrelinhas (pode começar só visualmente)
+Newsletter para treinar formulário + validação
+Carrossel de imagens dos pratos ou do ambiente do restaurante
+Seção de depoimentos de clientes (pode ser fictício por enquanto)
