@@ -54,7 +54,6 @@ body.dark .text-fotter {
     color: #f1c40f !important;
 }
 
-
 .checkbox {
     opacity: 0;
     position: absolute;
@@ -109,18 +108,7 @@ body.dark .text-fotter {
     padding-right: 20px;
 }
 
-.barra_navegacao{
-    background-color:var(--cor-secundaria);
-    padding: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    color: var(--cor-primaria);
-    list-style-type:none;
-    width: 100%;
-    margin-left: 20px;
-    
-}
+
 
 .logo_inicial{
     border-radius: 100%;    
@@ -129,20 +117,6 @@ body.dark .text-fotter {
     margin-right: 10px; /* Espaçamento entre logo e texto */
 }
 
-.barra_navegacao_titulo{
-    margin-right: 20px;
-}
-
-.barra_navegacao_link{
-    text-decoration: none;
-    padding: 5px;
-    margin: 10px;
-    color: var(--cor-primaria);
-    font-weight: bold
-}
-.barra_navegacao_link:hover{
-    color: var(--cor-terciaria);
-}
 
 .artigo_titulo{
     font-family: var(--fonte-primaria);
@@ -180,55 +154,3 @@ body.dark .text-fotter {
     margin: 10px;
 }
 
-.rodape{
-    background-color:var(--cor-secundaria);/* Cor de fundo do rodapé */
-    padding: 20px;
-    text-align:center; /* Centraliza o texto */
-    color: var(--cor-primaria);
-    
-}
-
-.rodape_lista{
-    list-style-type: none; /* Remove os símbolos da lista */
-}
-
-.linha_divisoria{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Consultas de mídia para responsividade */
-@media (max-width: 768px) {
-    .layout-container {
-        flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
-    }
-
-    .artigo-principal {
-        padding-right: 0; /* Remove o padding lateral */
-        padding-bottom: 20px; /* Adiciona espaçamento abaixo */
-    }
-
-    .barra_navegacao {
-        flex-direction: column; /* Muda a direção da barra de navegação para coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-
-    .barra_navegacao_link {
-        margin: 5px 0; /* Ajusta as margens dos links */
-    }
-
-    .botao {
-        width: 100%; /* Botão ocupa toda a largura em telas pequenas */
-        margin: 5px 0; /* Ajusta margens */
-    }
-}
-
-@media (max-width: 480px) {
-    .artigo_titulo {
-        font-size: 1.5rem; /* Diminui o tamanho da fonte do título */
-    }
-
-    .artigo_titulo_destaque {
-        font-size: 1.75rem; /* Diminui o tamanho da fonte do destaque */
-    }
-}
