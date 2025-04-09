@@ -1,7 +1,7 @@
 1. Adicionar interatividade com JavaScript
 💡 Ideias práticas:
 Botão para alternar entre temas (claro/escuro) ✅
-Filtro de pratos por categoria (ex: entradas, pratos principais, sobremesas)
+Filtro de pratos por categoria (ex: entradas, pratos principais, sobremesas) ✅
 Modal para mostrar detalhes de um prato ao clicar
 Campo de busca no cardápio com filtro em tempo real
 Validação de formulários de contato ou pedidos
