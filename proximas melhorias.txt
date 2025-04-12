@@ -16,7 +16,7 @@ Exibir um resumo do pedido com cálculo do total
 🔐 3. Sistema de login para clientes
 💡 Ideias de funcionalidades:
 Cadastro de novos usuários com nome, e-mail e senha
-Login com autenticação simples (pode começar só em HTML/JS e depois fazer no backend)
+Login com autenticação simples (pode começar só em HTML/JS e depois fazer no backend) ✅
 Áreas protegidas como “Meus Pedidos” ou “Perfil”
 Armazenar sessão com localStorage ou sessionStorage (no início)
 
