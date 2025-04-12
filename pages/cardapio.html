@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.classList.add('dark');
+        }
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/pagina Inicial/pagina_inicial.css">
     <link rel="shortcut icon" type="imagex/png" href="../style/pagina Inicial/iconn.png">
@@ -418,7 +423,7 @@
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function () {
                 navigator.serviceWorker
-                    .register("service-worker.js")
+                    .register("/service-worker.js")
                     .then(res => console.log("service worker registered"))
                     .catch(err => console.log("service worker not registered", err))
             })

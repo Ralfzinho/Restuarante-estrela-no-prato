@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.classList.add('dark');
+        }
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/pagina Inicial/pagina_inicial.css">
     <link rel="shortcut icon" type="imagex/png" href="./style/pagina Inicial/iconn.png">
@@ -24,7 +29,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand " href="#"><img class="logo_inicial"
                         src="https://cdn.midjourney.com/8919d838-7531-440f-9d7c-0829970c6dcb/0_2.png"

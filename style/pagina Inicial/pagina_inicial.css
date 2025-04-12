@@ -19,38 +19,36 @@
     transition: background 0.2s linear;
 } 
 
-body.dark{
-    background-color:#232c35 ;
+html.dark body {
+    background-color: #232c35;
     color: #f1c40f;
-
 }
 
-body.dark .nav-link {
+html.dark body .nav-link {
     color: #f1c40f !important;
 }
 
-body.dark .nav-link.active {
+html.dark body .nav-link.active {
     color: #ffffff !important;
 }
 
-body.dark .nav-link.disabled {
+html.dark body .nav-link.disabled {
     color: #777 !important;
 }
 
-body.dark .navbar-brand {
+html.dark body .navbar-brand {
     color: #f1c40f !important;
 }
 
-body.dark footer a {
+html.dark body footer a {
     color: #f1c40f !important;
 }
 
-body.dark footer hr {
+html.dark body footer hr {
     color: #f1c40f !important;
-
 }
 
-body.dark .text-fotter {
+html.dark body .text-fotter {
     color: #f1c40f !important;
 }
 
@@ -96,7 +94,6 @@ body.dark .text-fotter {
 .fa-sun {
     color: #f39c12;
 }
-
 .layout-container {
     display: flex;
     max-width: 1200px;
