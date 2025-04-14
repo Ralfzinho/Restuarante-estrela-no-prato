@@ -96,6 +96,18 @@ html.dark body .form-secundario .btn-custom{
     box-shadow: 0px 10px 40px -12px #f1c40f !important;
 }
 
+html.dark body .modal-content{
+    width: 100%;
+    padding: 16px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #f1c40f;
+    background:#333e49 !important;
+    box-shadow: 0px 10px 40px -12px #2b134b;
+}
 
 .checkbox {
     opacity: 0;

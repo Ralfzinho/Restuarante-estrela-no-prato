@@ -1,8 +1,8 @@
 const chk = document.getElementById('chk');
 
-// Funções para aplicar os temas
+
 function aplicarTemaDark() {
-  document.documentElement.classList.add('dark'); // html
+  document.documentElement.classList.add('dark');
   const navbar = document.querySelector('.navbar');
   navbar.classList.remove('navbar-light');
   navbar.classList.add('navbar-dark', 'bg-dark');
@@ -17,7 +17,7 @@ function aplicarTemaDark() {
 }
 
 function aplicarTemaLight() {
-  document.documentElement.classList.remove('dark'); // html
+  document.documentElement.classList.remove('dark');
   const navbar = document.querySelector('.navbar');
   navbar.classList.remove('navbar-dark', 'bg-dark');
   navbar.classList.add('navbar-light');
@@ -31,7 +31,6 @@ function aplicarTemaLight() {
   chk.checked = false;
 }
 
-// Evento de mudança do checkbox para alternar o tema e salvar a preferência
 chk.addEventListener('change', () => {
   if (chk.checked) {
     aplicarTemaDark();
@@ -42,7 +41,7 @@ chk.addEventListener('change', () => {
   }
 });
 
-// Caso queira, uma confirmação adicional ao carregar a página (mas o script inline já cuidou disso)
+
 window.addEventListener('load', () => {
   if (localStorage.getItem('darkMode') === 'enabled') {
     aplicarTemaDark();
