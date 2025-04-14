@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <script>
         if (localStorage.getItem('darkMode') === 'enabled') {
-          document.documentElement.classList.add('dark');
+            document.documentElement.classList.add('dark');
         }
-      </script>
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/pagina Inicial/pagina_inicial.css">
     <link rel="shortcut icon" type="imagex/png" href="../style/pagina Inicial/iconn.png">
@@ -16,10 +16,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         button.active {
-                        background-color: #0d6efd;
-                        color: white;
-                        border-color: #0d6efd;
-                    }
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
     </style>
 </head>
 
@@ -43,7 +43,8 @@
                         <li class="nav-item"><a class="nav-link" href="./sobre-nos.html">Sobre Nós</a></li>
                         <li class="nav-item"><a class="nav-link active" href="./cardapio.html">Nosso Cardápio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./reserva.html">Faça Reserva</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./trabalhe-conosco.html">Trabalhe Conosco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./trabalhe-conosco.html">Trabalhe Conosco</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="./sobre-projeto.html">Sobre o Projeto</a></li>
                         <li class="nav-item"><a class="nav-link" href="./login.html">Meus Pedidos</a></li>
                         <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Nossa Revista</a></li>
@@ -62,13 +63,14 @@
     <main>
         <div class="container menu-section">
             <div class="row">
-                <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center" role="group">
-                    <button type="button" class="btn btn-outline-primary flex-fill" data-filtro="todos">Todos</button>
-                    <button type="button" class="btn btn-outline-primary flex-fill" data-filtro="entrada">Entradas</button>
-                    <button type="button" class="btn btn-outline-primary flex-fill" data-filtro="principal">Pratos Principais</button>
-                    <button type="button" class="btn btn-outline-primary flex-fill" data-filtro="sobremesa">Sobremesas</button>
-                    <button type="button" class="btn btn-outline-primary flex-fill" data-filtro="bebidas">Bebidas</button>
-                  </div>
+                <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center form-secundario" role="group">
+                    <button type="button" class="btn btn-primary flex-fill" data-filtro="todos">Todos</button>
+                    <button type="button" class="btn btn-primary flex-fill" data-filtro="entrada">Entradas</button>
+                    <button type="button" class="btn btn-primary flex-fill" data-filtro="principal">Pratos
+                        Principais</button>
+                    <button type="button" class="btn btn-primary flex-fill" data-filtro="sobremesa">Sobremesas</button>
+                    <button type="button" class="btn btn-primary flex-fill" data-filtro="bebidas">Bebidas</button>
+                </div>
                 <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="entrada">
@@ -80,7 +82,7 @@
                                 style="height: auto; width: 100%; object-fit: cover; padding: 10px; background: rgb(255, 255, 255);"
                                 alt="Carpaccio de Nebula">
                         </picture>
-                        <div class="menu-item-body" >
+                        <div class="menu-item-body">
                             <h5 class="menu-item-title mt-2">Carpaccio de Nebula</h5>
                             <p class="menu-item-description">Fatias finas de peixe translúcido com cristais de
                                 especiarias
@@ -88,12 +90,62 @@
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 29,90</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato1"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato1" tabindex="-1" aria-labelledby="tituloModalPrato1"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Carpaccio de Nebula</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Descubra o sabor etéreo do nosso Carpaccio de
+                                            Nebula: finíssimas fatias de peixe, tão translúcidas quanto os véus de uma
+                                            nebulosa distante, realçadas por cristais de especiarias exclusivos,
+                                            coletados nas profundezas da Nebulosa Serpente de Fogo. Uma experiência
+                                            gastronômica que equilibra delicadeza e intensidade, elevando o paladar ao
+                                            universo dos sabores cósmicos.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Nossos chefs exploraram os confins
+                                            do universo gastronômico para selecionar o peixe ideal: uma espécie rara
+                                            que, com sua textura translúcida, remete à leveza das nuvens cósmicas. Os
+                                            cristais de especiarias, cuidadosamente escolhidos em feiras
+                                            intergalácticas, foram colhidos sob condições quase místicas – um encontro
+                                            de tradição e inovação que resulta num equilíbrio perfeito entre frescor e
+                                            intensidade.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Para realçar a sutileza e a
+                                            complexidade do Carpaccio de Nebula, sugerimos uma harmonização com um vinho
+                                            branco seco, de notas minerais e cítricas, que equilibra a delicadeza do
+                                            peixe e o brilho das especiarias. Outra opção é um coquetel leve à base de
+                                            espumante com um toque de limão siciliano, que acentua a experiência
+                                            sensorial e transforma cada gole em uma verdadeira viagem pelo cosmos.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="entrada">
                         <picture>
@@ -105,19 +157,66 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Caviar de Pó Estelar</h5>
+                            <h5 class="menu-item-title mt-2">Caviar de Pó Estelar</h5>
                             <p class="menu-item-description">Pérolas energéticas de cristais estelares temperadas com
                                 sais
                                 alienígenas.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 85,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato2"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato2" tabindex="-1" aria-labelledby="tituloModalPrato2"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Caviar de Pó Estelar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Mergulhe na experiência única do nosso Caviar de
+                                            Pó Estelar. Estas pérolas energéticas são formadas por cristais raros,
+                                            colhidos de regiões inexploradas da constelação, e temperadas com sais
+                                            alienígenas. Cada mordida é como saborear um vislumbre da imensidão do
+                                            cosmos – intensa, surpreendente e inesperadamente leve. Um deleite para os
+                                            sentidos que combina sofisticação com um toque místico.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Selecionamos os cristais estelares
+                                            mais puros, provenientes de fontes remotas, para garantir uma energia única
+                                            em cada pérola. Os sais alienígenas, cuidadosamente adquiridos em mercados
+                                            intergalácticos, conferem um sabor sutil, capaz de transformar o paladar
+                                            numa verdadeira viagem pelo desconhecido.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Para acentuar a complexidade e o
+                                            brilho deste prato, sugerimos harmonizá-lo com um champanhe extra seco ou um
+                                            vinho branco com mineralidade acentuada. Estas bebidas realçam a finesse dos
+                                            sais e a intensidade dos cristais, compondo uma combinação digna dos
+                                            melhores banquetes celestiais.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="entrada">
                         <picture>
@@ -129,19 +228,64 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Meteoritos de Fogo</h5>
+                            <h5 class="menu-item-title mt-2">Meteoritos de Fogo</h5>
                             <p class="menu-item-description">Croquetes crocantes de carne alienígena com queijo
                                 vulcânico
                                 derretido.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 75,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato3"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato3" tabindex="-1" aria-labelledby="tituloModalPrato3"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Meteoritos de Fogo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Direto das crateras de um planeta em erupção, os
+                                            Meteoritos de Fogo são croquetes artesanais de carne alienígena, envoltos
+                                            por uma crosta crocante temperada com especiarias cósmicas. No coração de
+                                            cada esfera, uma explosão de queijo vulcânico derretido – extraído das
+                                            profundezas de um astro ativo, onde o sabor atinge seu ponto máximo de
+                                            intensidade.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> A carne alienígena é proveniente de
+                                            criaturas de ambiente hostil, ricas em proteínas exóticas e de sabor
+                                            intenso. Já o queijo vulcânico é maturado em temperaturas extremas, o que
+                                            confere uma cremosidade e pungência incomparáveis.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Experimente com cervejas
+                                            artesanais de teor alcoólico elevado ou com vinhos tintos encorpados. A
+                                            robustez dessas bebidas equilibra a força do prato e cria uma experiência
+                                            sensorial marcante.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="principal">
                         <picture>
@@ -153,18 +297,64 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Estufado de Ka'vor</h5>
+                            <h5 class="menu-item-title mt-2">Estufado de Ka'vor</h5>
                             <p class="menu-item-description">Carne de criatura alienígena cozida com cogumelos
                                 bioluminescentes e raízes intergalácticas.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 120,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato4"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato4" tabindex="-1" aria-labelledby="tituloModalPrato4"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Estufado de Ka'vor</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição Detalhada:</strong> Uma receita ancestral, passada de
+                                            geração em geração nas colônias da Nebulosa de Azurion. O Estufado de Ka’vor
+                                            reúne cortes nobres de carne de criatura ka’vor, cozidos lentamente por 13
+                                            horas junto a cogumelos bioluminescentes e raízes coletadas em órbitas
+                                            úmidas de planetas vivos. O sabor é profundo, misterioso e transformador,
+                                            como a própria galáxia.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Carne Ka’vor: Criatura lendária de
+                                            pele resistente e músculos macios, criada em ambientes com gravidade
+                                            instável. Cogumelos Bioluminescentes: Colhidos sob a luz de três luas, seus
+                                            pigmentos naturais brilham suavemente e liberam aromas adocicados. Raízes
+                                            Intergalácticas: Raras, de propriedades nutritivas e aromáticas, dão textura
+                                            e um toque terroso ao prato.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Ideal com hidromel escuro, chá de
+                                            folhas nebulosas ou vinhos defumados. O sabor denso do prato exige companhia
+                                            à altura.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="principal">
                         <picture>
@@ -176,18 +366,64 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Pizza de Lava Flutuante</h5>
+                            <h5 class="menu-item-title mt-2">Pizza de Lava Flutuante</h5>
                             <p class="menu-item-description">Pizza com queijos vulcânicos sobre crosta cozida em magma.
                             </p>
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 95,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato5"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato5" tabindex="-1" aria-labelledby="tituloModalPrato5"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Pizza de Lava Flutuante</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Forjada nas profundezas de uma crosta planetária
+                                            ativa, a Pizza de Lava Flutuante traz uma explosão de sabores
+                                            incandescentes. Sua massa é levitada sobre campos magnéticos para garantir
+                                            cozimento uniforme com o calor do magma puro, enquanto os queijos vulcânicos
+                                            – extraídos de rochas porosas em planetas geotérmicos – derretem em um
+                                            espetáculo visual e gustativo.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Queijos Vulcânicos: Maturados em
+                                            cavernas subterrâneas com calor constante, ricos em minerais e sabor
+                                            intensamente defumado. Massa Flutuante: Crocante por fora, macia por dentro,
+                                            fermentada em
+                                            gravidade parcial para criar textura leve e aerada. Molho Solar: Um extrato
+                                            de tomates cultivados com luz solar artificial
+                                            concentrada, com toques de especiarias cósmicas.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Combine com cerveja de plasma,
+                                            suco de frutas astrais ou refrigerantes com gás de titânio líquido.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="principal">
                         <picture>
@@ -199,19 +435,65 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Filé de Anéis de Saturno</h5>
+                            <h5 class="menu-item-title mt-2">Filé de Anéis de Saturno</h5>
                             <p class="menu-item-description">Filé grelhado com ervas interestelares e batatas
                                 caramelizadas
                                 em atmosfera simulada de Saturno.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 110,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato6"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato6" tabindex="-1" aria-labelledby="tituloModalPrato6"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Filé de Anéis de Saturno</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Inspirado na grandiosidade dos anéis de Saturno,
+                                            este prato entrega uma experiência cósmica à altura dos deuses galácticos. O
+                                            filé é grelhado com precisão quântica, usando radiação térmica calibrada
+                                            para simular o calor suave da alta atmosfera saturniana. As batatas são
+                                            lentamente caramelizadas sob pressão atmosférica artificial, absorvendo o
+                                            sabor das especiarias nebulosas.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Filé Estelar: Proveniente de
+                                            rebanhos criados em estações orbitais, com nutrição balanceada à base de
+                                            algas espaciais.
+                                            Ervas Interestelares: Cultivadas em estufas gravitacionais que replicam as
+                                            condições de luas tropicais.
+                                            Batatas Saturninas: Originárias de Marte, passam por um processo de
+                                            caramelização a vácuo que cria uma casquinha crocante e interior macio.</p>
+                                        <p><strong>Sugestões de Harmonização:</strong> Combine com um vinho nebuloso do
+                                            sistema Tau Ceti ou uma infusão gaseificada de folhas de Vênus.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="sobremesa">
                         <picture>
@@ -223,18 +505,64 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Sorvete de Antimatéria</h5>
+                            <h5 class="menu-item-title mt-2">Sorvete de Antimatéria</h5>
                             <p class="menu-item-description">Sobremesa efervescente de moléculas de antimatéria
                                 estabilizada, disponível em sabores cósmicos.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 50,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato7"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato7" tabindex="-1" aria-labelledby="tituloModalPrato7"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Sorvete de Antimatéria</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Criado em laboratórios criogênicos de Andrômeda,
+                                            este sorvete utiliza moléculas de antimatéria estabilizadas para criar uma
+                                            textura única: efervescente, leve como plasma e intensamente saborosa. A
+                                            cada colherada, explosões sutis de energia provocam sensações térmicas
+                                            reversas — ora refrescante, ora morna — simulando a dança da matéria e
+                                            antimatéria no universo.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Leite lunar sintetizado
+                                            Açúcar de nebulosa colhido em órbita
+                                            Antimatéria encapsulada por campos de contenção doce</p>
+                                        <p><strong>Sabores Cósmicos Disponíveis:</strong> Névoa de Vênus (baunilha ácida
+                                            com notas florais)
+                                            Radiação Azul (menta cristalina com especiarias congelantes)
+                                            Buraco Negro de Chocolate (intenso, denso e com toque de singularidade de
+                                            cacau)
+                                            Estrela Cadente (frutas cítricas raras com estalos de oxigênio doce)</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="sobremesa">
                         <picture>
@@ -246,19 +574,63 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Cometa de Chocolate Nebuloso</h5>
+                            <h5 class="menu-item-title mt-2">Cometa de Chocolate Nebuloso</h5>
                             <p class="menu-item-description">Esfera de chocolate recheada com mousse de framboesa e
                                 poeira
                                 de caramelo.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 50,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato8"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato8" tabindex="-1" aria-labelledby="tituloModalPrato8"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Cometa de Chocolate Nebuloso</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Inspirado nas órbitas caóticas dos cometas
+                                            intergalácticos, esta sobremesa é uma fusão de intensidade e delicadeza. Ao
+                                            quebrar a crosta crocante de chocolate nebuloso, você revela uma mousse de
+                                            framboesa aerada, envolta por uma fina camada de caramelo estelar em pó.
+                                            Cada colherada é um impacto doce que derrete na boca com a suavidade de uma
+                                            explosão solar.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Chocolate 88% escuro com traços
+                                            de cacau de Titã
+                                            Mousse feita com framboesas cultivadas sob luz vermelha de anãs rubras
+                                            Poeira de caramelo cristalizada em câmaras de vácuo</p>
+                                        <p><strong>Efeitos Sensoriais:</strong> Leve estalo térmico na língua
+                                            Aroma amadeirado doce com notas de estrela de anis Finalização com névoa de
+                                            baunilha ao redor do prato</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="sobremesa">
                         <picture>
@@ -270,18 +642,63 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Doce de Estrela Cadente</h5>
+                            <h5 class="menu-item-title mt-2">Doce de Estrela Cadente</h5>
                             <p class="menu-item-description">Cristais de açúcar cósmico com núcleo derretido e creme
                                 galáctico brilhante.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 48,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato9"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato9" tabindex="-1" aria-labelledby="tituloModalPrato9"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Doce de Estrela Cadente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Este doce captura a magia efêmera das estrelas
+                                            cadentes. Crocantes por fora como cristais de gelo espacial, mas com um
+                                            coração morno de caramelo líquido aromatizado com especiarias
+                                            interplanetárias. Servido com um creme galáctico cintilante que brilha
+                                            levemente no escuro, essa sobremesa é uma experiência visual e sensorial.
+                                        </p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Açúcar cristalino polarizado da
+                                            Nebulosa de Andrômeda
+                                            Caramelo derretido em forno gravitacional
+                                            Creme galáctico à base de leite cósmico com partículas fluorescentes
+                                            comestíveis</p>
+                                        <p><strong>Efeitos Sensoriais:</strong> Suave estalo ao morder a crosta
+                                            Núcleo quente que espalha doçura instantânea
+                                            Creme que brilha por alguns segundos no prato e na colher</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="sobremesa">
                         <picture>
@@ -293,17 +710,61 @@
                                 alt="Carpaccio de Nebula">
                         </picture>
                         <div class="menu-item-body">
-                            <h5 class="menu-item-title mt-2" >Coquetel Galáxia Azul</h5>
+                            <h5 class="menu-item-title mt-2">Coquetel Galáxia Azul</h5>
                             <p class="menu-item-description">Frutas espaciais, suco de cometa e névoa congelada.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 35,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato10"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato10" tabindex="-1" aria-labelledby="tituloModalPrato10"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Coquetel Galáxia Azul</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Refrescante e envolvente, o Coquetel Galáxia Azul
+                                            é preparado com a essência de frutas espaciais cultivadas em gravidade zero,
+                                            misturadas ao suco de cometa, uma infusão cítrica colhida nas caudas geladas
+                                            dos astros errantes. A névoa congelada, feita com nitrogênio lunar, mantém a
+                                            bebida em constante evaporação visual, como uma nebulosa dentro da taça.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Frutas de Vega VII (frutas com
+                                            sabor entre mirtilo e tangerina)
+                                            Suco de cometa condensado
+                                            Névoa criogênica de gelo seco lunar
+                                            Pó cintilante comestível de estrela-anis</p>
+                                        <p><strong>Efeitos Sensoriais:</strong> Leve frescor ao primeiro gole
+                                            Brilho interno na bebida enquanto é mexida
+                                            Aroma que muda conforme a temperatura da taça</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="bebidas">
                         <picture>
@@ -322,12 +783,57 @@
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 38,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato11"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato11" tabindex="-1" aria-labelledby="tituloModalPrato11"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Néctar de Lua Cheia</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> Delicado, etéreo e misterioso, o Néctar de Lua
+                                            Cheia é preparado com flores raras cultivadas nos campos flutuantes de
+                                            Andrômeda. Sua textura cremosa envolve o paladar em uma dança suave,
+                                            enquanto o anis estelar deixa um rastro de frescor aromático. Uma bebida
+                                            criada para os momentos de contemplação estelar.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Essência de flor de Andrômeda (de
+                                            colheita noturna)
+                                            Leite vegetal lunar
+                                            Anis estelar moído à mão
+                                            Gotas de orvalho de asteroide cristalizado
+                                            Toque de mel cósmico para equilíbrio</p>
+                                        <p><strong>Efeitos Sensoriais:</strong> Sensação de leveza após o primeiro gole
+                                            Aroma floral persistente e envolvente
+                                            Textura suave com brilho interno perolado</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-item" data-categoria="bebidas">
                         <picture>
@@ -345,8 +851,53 @@
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="menu-item-price">R$ 30,00</span>
-                                <button class="add-to-cart-btn btn btn-outline-primary"><i class="bi bi-cart-plus"></i>
-                                    Adicionar</button>
+                                <form class="form-secundario">
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato12"><i class="bi bi-cart-plus"></i>
+                                        Adicionar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalPrato12" tabindex="-1" aria-labelledby="tituloModalPrato12"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tituloModalPrato1">Chá de Supernova</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-5">
+                                        <img src="https://via.placeholder.com/400x300" class="img-fluid rounded"
+                                            alt="Imagem do Carpaccio">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p><strong>Descrição:</strong> O Chá de Supernova é mais do que uma bebida — é
+                                            uma experiência de renascimento estelar em forma líquida. Esta infusão
+                                            combina ervas cósmicas que crescem nas bordas dos anéis planetários com
+                                            pétalas coletadas à beira de buracos negros estabilizados. A cada gole, um
+                                            universo de sabores se expande na sua boca.</p>
+                                        <p><strong>Origem dos Ingredientes:</strong> Folhas de Yllira solar (colhidas ao amanhecer em
+                                            Vênus-Prime)
+                                            Pétalas de flores da órbita de Próxima Centaur
+                                            Fragmentos de canela cristalizada de cometa
+                                            Névoa de anis e raiz de estrela
+                                            Gotas de mel espectra</p>
+                                        <p><strong>Efeitos Sensoriais:</strong> Sensação de aquecimento que pulsa do
+                                            centro do peito
+                                            Aroma complexo com notas picantes e florais
+                                            Sabor que se transforma levemente a cada gole</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -369,7 +920,7 @@
                     <p class="text-fotter small">
                         Uma constelação de sabores para o seu paladar.
                     </p>
-                    <form class="d-flex">
+                    <form class="d-flex form-secundario">
                         <input type="email" class="form-control me-2" placeholder="Digite seu e-mail">
                         <button class="btn btn-primary text-nowrap">Inscrever-se</button>
                     </form>
@@ -399,7 +950,7 @@
                     <a href="#"><img
                             src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                             width="120"></a>
-                            <a href="#"><img src="../style/pagina Inicial/5a902db97f96951c82922874.png" width="120"></a>
+                    <a href="#"><img src="../style/pagina Inicial/5a902db97f96951c82922874.png" width="120"></a>
                 </div>
             </div>
 

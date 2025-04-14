@@ -4,22 +4,30 @@ const chk = document.getElementById('chk');
 function aplicarTemaDark() {
   document.documentElement.classList.add('dark'); // html
   const navbar = document.querySelector('.navbar');
-  const btn = document.querySelector('.btn');
   navbar.classList.remove('navbar-light');
   navbar.classList.add('navbar-dark', 'bg-dark');
-  btn.classList.remove('btn-primary');
-  btn.classList.add('btn-custom');
+  
+  const btns = document.querySelectorAll('.btn');
+  btns.forEach(btn => {
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-custom');
+  });
+  
   chk.checked = true;
 }
 
 function aplicarTemaLight() {
   document.documentElement.classList.remove('dark'); // html
   const navbar = document.querySelector('.navbar');
-  const btn = document.querySelector('.btn');
   navbar.classList.remove('navbar-dark', 'bg-dark');
   navbar.classList.add('navbar-light');
-  btn.classList.remove('btn-custom');
-  btn.classList.add('btn-primary');
+
+  const btns = document.querySelectorAll('.btn');
+  btns.forEach(btn => {
+    btn.classList.remove('btn-custom');
+    btn.classList.add('btn-primary');
+  });
+  
   chk.checked = false;
 }
 
