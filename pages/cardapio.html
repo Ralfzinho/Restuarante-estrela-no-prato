@@ -70,6 +70,42 @@
                         Principais</button>
                     <button type="button" class="btn btn-primary flex-fill" data-filtro="sobremesa">Sobremesas</button>
                     <button type="button" class="btn btn-primary flex-fill" data-filtro="bebidas">Bebidas</button>
+                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button"
+                        aria-controls="offcanvasCart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasCartLabel">
+                            <i class="fa-solid fa-cart-shopping me-2"></i>Meu Carrinho
+                          </h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+                        </div>
+                        
+                        <div class="offcanvas-body d-flex flex-column justify-content-between">
+                          <!-- Itens do carrinho -->
+                          <div id="cart-items-container">
+                            <!-- Os itens serão inseridos aqui via JavaScript -->
+                            <p>Seu carrinho está vazio.</p>
+                          </div>
+                      
+                          <!-- Resumo e botões -->
+                          <div>
+                            <div class="mt-3">
+                              <div>Subtotal: R$ <span id="cart-subtotal">0,00</span></div>
+                              <div>Total: R$ <span id="cart-total">0,00</span></div>
+                            </div>
+                            <div class="mt-4 gap-2 d-flex flex-column">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">
+                                Continuar Comprando
+                              </button>
+                              <button type="button" class="btn btn-success">
+                                <i class="bi bi-cart-plus"></i> Finalizar Compra
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-12 mb-4">
@@ -102,7 +138,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato1">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -147,8 +183,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Carpaccio de Nebula"
+                                        data-price="29.90"
+                                        data-img="https://cdn.midjourney.com/28311d39-ac1f-4b97-be92-674790a385a1/0_2.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -170,7 +211,8 @@
                         <div class="menu-item-body d-flex flex-column flex-grow-1 px-3 pb-3">
                             <div>
                                 <h5 class="menu-item-title mt-2">Caviar de Pó Estelar</h5>
-                                <p class="menu-item-description">Pérolas energéticas de cristais estelares temperadas com
+                                <p class="menu-item-description">Pérolas energéticas de cristais estelares temperadas
+                                    com
                                     sais alienígenas.</p>
                                 <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             </div>
@@ -181,7 +223,7 @@
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato2"><i
                                                 class="bi bi-cart-plus"></i>
-                                            Adicionar
+                                            Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -223,8 +265,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Caviar de Pó Estela"
+                                        data-price="85.00"
+                                        data-img="https://cdn.midjourney.com/e334a6ce-89ad-4058-8577-02848781f716/0_1.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -247,7 +294,7 @@
                             <div>
                                 <h5 class="menu-item-title mt-2">Meteoritos de Fogo</h5>
                                 <p class="menu-item-description">Croquetes crocantes de carne alienígena com queijo
-                                vulcânico derretido.</p>
+                                    vulcânico derretido.</p>
                                 <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             </div>
                             <div class="mt-auto">
@@ -257,7 +304,7 @@
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato3"><i
                                                 class="bi bi-cart-plus"></i>
-                                            Adicionar
+                                            Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -297,8 +344,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Meteoritos de Fogo"
+                                        data-price="75.00"
+                                        data-img="https://cdn.midjourney.com/38ba3568-92b4-44c6-9c02-6bc530736683/0_0.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -332,7 +384,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato4">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -373,8 +425,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Estufado de Ka'vor"
+                                        data-price="120.00"
+                                        data-img="https://cdn.midjourney.com/b24045e9-24df-4c95-b017-4c431c1af1fd/0_2.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -397,7 +454,8 @@
                             <!-- Conteúdo superior: título e descrições -->
                             <div>
                                 <h5 class="menu-item-title mt-2">Pizza de Lava Flutuante</h5>
-                                <p class="menu-item-description">Pizza com queijos vulcânicos sobre crosta cozida em magma.</p>
+                                <p class="menu-item-description">Pizza com queijos vulcânicos sobre crosta cozida em
+                                    magma.</p>
                                 <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             </div>
                             <!-- Conteúdo inferior: preço e botão, empurrado para o final -->
@@ -407,7 +465,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato5">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -472,7 +530,8 @@
                             <!-- Conteúdo superior: título e descrições -->
                             <div>
                                 <h5 class="menu-item-title mt-2">Filé de Anéis de Saturno</h5>
-                                <p class="menu-item-description">Filé grelhado com ervas interestelares e batatas caramelizadas
+                                <p class="menu-item-description">Filé grelhado com ervas interestelares e batatas
+                                    caramelizadas
                                     em atmosfera simulada de Saturno.</p>
                                 <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             </div>
@@ -483,7 +542,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato6">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -524,8 +583,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Filé de Anéis de Saturno"
+                                        data-price="110.00"
+                                        data-img="https://cdn.midjourney.com/0a02fc7b-3353-43e9-8ae0-8f1ea9c8e4d6/0_0.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -559,7 +623,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato7">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -600,8 +664,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Sorvete de Antimatéria"
+                                        data-price="50.00"
+                                        data-img="https://cdn.midjourney.com/4687ceea-e6d8-4dbe-9683-9709ab79d3d8/0_1.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -633,9 +702,9 @@
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <span class="menu-item-price">R$ 50,00</span>
                                     <form class="form-secundario">
-                                        <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#modalPrato8">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                        <button type="button" class="add-to-cart-btn btn btn-primary"
+                                            data-bs-toggle="modal" data-bs-target="#modalPrato8">
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -674,8 +743,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Cometa de Chocolate Nebuloso"
+                                        data-price="50.00"
+                                        data-img="https://cdn.midjourney.com/d6ef876e-dcee-4a08-af27-31f75d5fd129/0_2.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -686,36 +760,36 @@
                 <!-- Item do Cardápio -->
                 <div class="col-md-6 col-lg-3">
                     <div class="menu-item h-100 d-flex flex-column" data-categoria="sobremesa">
-    <picture>
-        <source media="(min-width:650px)"
-            srcset="https://cdn.midjourney.com/2ad471ef-affe-491a-b54a-ec72a834b107/0_2.png">
-        <img src="https://cdn.midjourney.com/2ad471ef-affe-491a-b54a-ec72a834b107/0_2.png"
-            class="img-fluid rounded shadow-lg border"
-            style="height: auto; width: 100%; object-fit: cover; padding: 10px; background: rgb(255, 255, 255);"
-            alt="Doce de Estrela Cadente">
-    </picture>
-    <div class="menu-item-body d-flex flex-column flex-grow-1 px-3 pb-3">
-        <!-- Conteúdo superior: título e descrições -->
-        <div>
-            <h5 class="menu-item-title mt-2">Doce de Estrela Cadente</h5>
-            <p class="menu-item-description">Cristais de açúcar cósmico com núcleo derretido e creme
-                galáctico brilhante.</p>
-            <p class="menu-item-description">⭐⭐⭐⭐☆</p>
-        </div>
-        <!-- Conteúdo inferior: preço e botão -->
-        <div class="mt-auto">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <span class="menu-item-price">R$ 48,00</span>
-                <form class="form-secundario">
-                    <button type="button" class="add-to-cart-btn btn btn-primary"
-                        data-bs-toggle="modal" data-bs-target="#modalPrato9">
-                        <i class="bi bi-cart-plus"></i> Adicionar
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+                        <picture>
+                            <source media="(min-width:650px)"
+                                srcset="https://cdn.midjourney.com/2ad471ef-affe-491a-b54a-ec72a834b107/0_2.png">
+                            <img src="https://cdn.midjourney.com/2ad471ef-affe-491a-b54a-ec72a834b107/0_2.png"
+                                class="img-fluid rounded shadow-lg border"
+                                style="height: auto; width: 100%; object-fit: cover; padding: 10px; background: rgb(255, 255, 255);"
+                                alt="Doce de Estrela Cadente">
+                        </picture>
+                        <div class="menu-item-body d-flex flex-column flex-grow-1 px-3 pb-3">
+                            <!-- Conteúdo superior: título e descrições -->
+                            <div>
+                                <h5 class="menu-item-title mt-2">Doce de Estrela Cadente</h5>
+                                <p class="menu-item-description">Cristais de açúcar cósmico com núcleo derretido e creme
+                                    galáctico brilhante.</p>
+                                <p class="menu-item-description">⭐⭐⭐⭐☆</p>
+                            </div>
+                            <!-- Conteúdo inferior: preço e botão -->
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <span class="menu-item-price">R$ 48,00</span>
+                                    <form class="form-secundario">
+                                        <button type="button" class="add-to-cart-btn btn btn-primary"
+                                            data-bs-toggle="modal" data-bs-target="#modalPrato9">
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="modal fade" id="modalPrato9" tabindex="-1" aria-labelledby="tituloModalPrato9"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -749,8 +823,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Doce de Estrela Cadente"
+                                        data-price="48.00"
+                                        data-img="https://cdn.midjourney.com/2ad471ef-affe-491a-b54a-ec72a834b107/0_2.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -783,7 +862,7 @@
                                     <form class="form-secundario">
                                         <button type="button" class="add-to-cart-btn btn btn-primary"
                                             data-bs-toggle="modal" data-bs-target="#modalPrato10">
-                                            <i class="bi bi-cart-plus"></i> Adicionar
+                                            <i class="bi bi-cart-plus"></i> Ver Detalhes
                                         </button>
                                     </form>
                                 </div>
@@ -822,8 +901,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Coquetel Galáxia Azul"
+                                        data-price="35.00"
+                                        data-img="https://cdn.midjourney.com/fe168846-36b2-436b-8464-82fdddd5ce76/0_3.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -844,14 +928,15 @@
                         </picture>
                         <div class="menu-item-body d-flex flex-column flex-grow-1 px-3 pb-3">
                             <h5 class="menu-item-title mt-2">Néctar de Lua Cheia</h5>
-                            <p class="menu-item-description">Drink cremoso extraído de flores de Andrômeda com toque de anis estelar.</p>
+                            <p class="menu-item-description">Drink cremoso extraído de flores de Andrômeda com toque de
+                                anis estelar.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐⭐</p>
                             <div class="d-flex justify-content-between align-items-center mb-4 mt-auto">
                                 <span class="menu-item-price">R$ 38,00</span>
                                 <form class="form-secundario">
-                                    <button type="button" class="add-to-cart-btn btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#modalPrato11">
-                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato11">
+                                        <i class="bi bi-cart-plus"></i> Ver Detalhes
                                     </button>
                                 </form>
                             </div>
@@ -890,8 +975,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Néctar de Lua Cheia"
+                                        data-price="38.00"
+                                        data-img="https://cdn.midjourney.com/a8c9e4fd-e364-40c2-8f99-4998a17a6976/0_1.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -912,14 +1002,15 @@
                         </picture>
                         <div class="menu-item-body d-flex flex-column flex-grow-1 px-3 pb-3">
                             <h5 class="menu-item-title mt-2">Chá de Supernova</h5>
-                            <p class="menu-item-description">Infusão de ervas cósmicas servida em xícara que brilha com reflexos de uma explosão estelar.</p>
+                            <p class="menu-item-description">Infusão de ervas cósmicas servida em xícara que brilha com
+                                reflexos de uma explosão estelar.</p>
                             <p class="menu-item-description">⭐⭐⭐⭐☆</p>
                             <div class="d-flex justify-content-between align-items-center mb-4 mt-auto">
                                 <span class="menu-item-price">R$ 30,00</span>
                                 <form class="form-secundario">
-                                    <button type="button" class="add-to-cart-btn btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#modalPrato12">
-                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    <button type="button" class="add-to-cart-btn btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalPrato12">
+                                        <i class="bi bi-cart-plus"></i> Ver Detalhes
                                     </button>
                                 </form>
                             </div>
@@ -960,8 +1051,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-success">
+                                        data-bs-dismiss="modal">Fechar
+                                    </button>
+                                    <button type="button" class="btn btn-success add-to-cart-btn"
+                                        data-name="Chá de Supernova"
+                                        data-price="30.00"
+                                        data-img="https://cdn.midjourney.com/dc3471a4-87ee-492e-b17b-8302ae346cd4/0_2.png"
+                                        data-bs-dismiss="modal">
                                         <i class="bi bi-cart-plus"></i> Adicionar ao Pedido
                                     </button>
                                 </div>
@@ -1050,6 +1146,7 @@
     </script>
     <script src="../js/tema.js"></script>
     <script src="../js/filtropesquisa.js"></script>
+    <script src="../js/carrinho.js"></script>
     <script src="https://kit.fontawesome.com/b6ffb0afa4.js" crossorigin="anonymous"></script>
 </body>
 
