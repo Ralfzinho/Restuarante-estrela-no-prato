@@ -1,50 +1,47 @@
-// Espera o HTML estar completamente carregado antes de rodar o JS
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Seleciona todos os botões que têm o atributo data-filtro
     const botoes = document.querySelectorAll("[data-filtro]");
-
-    // Seleciona todos os itens que têm o atributo data-categoria (ou seja, os cards do menu)
     const itens = document.querySelectorAll("[data-categoria]");
 
-    // Para cada botão de filtro...
+    // Filtro via botões de categoria
     botoes.forEach(botao => {
-
-        // Adiciona um ouvinte de clique a esse botão
         botao.addEventListener("click", () => {
-
-            // Pega o valor do filtro (ex: "bebidas", "pratos", "sobremesas", etc.)
             const filtro = botao.getAttribute("data-filtro");
-
-            // Remove a classe 'active' de todos os botões (pra limpar os estilos)
             botoes.forEach(btn => btn.classList.remove("active"));
-
-            // Adiciona a classe 'active' ao botão que foi clicado
             botao.classList.add("active");
 
-            // Agora filtra os itens do cardápio
+            // Itera sobre cada item e aplica o filtro
             itens.forEach(item => {
-
-                // Pega a categoria do item atual (ex: "bebidas", "sobremesa")
                 const categoria = item.getAttribute("data-categoria");
+                const container = item.closest(".col-md-6.col-lg-3");
 
-                // Sobe um nível até a div de colunas (que é o container externo do card)
-                const container = item.closest(".col-md-6.col-lg-4");
-
-                // Se o filtro for "todos" ou se a categoria bater com o filtro clicado...
                 if (filtro === "todos" || filtro === categoria) {
-
-                    // Mostra o item e seu container
                     item.classList.remove("d-none");
                     container.classList.remove("d-none");
-
                 } else {
-
-                    // Esconde o item e seu container
                     item.classList.add("d-none");
                     container.classList.add("d-none");
                 }
             });
+        });
+    });
+
+    // Filtro via campo de busca em tempo real
+    const campoBusca = document.getElementById("campoBusca");
+    campoBusca.addEventListener("input", () => {
+        const termo = campoBusca.value.toLowerCase();
+
+        itens.forEach(item => {
+            const container = item.closest(".col-md-6.col-lg-3");
+            // Pega todo o texto do item (title, descrição, etc.) e converte para minúsculas
+            const texto = item.innerText.toLowerCase();
+
+            if (texto.includes(termo)) {
+                item.classList.remove("d-none");
+                container.classList.remove("d-none");
+            } else {
+                item.classList.add("d-none");
+                container.classList.add("d-none");
+            }
         });
     });
 });
