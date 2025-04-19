@@ -16,8 +16,14 @@
     padding: 1px;
     border: 0;
     box-sizing: border-box;
-    transition: background 0.2s linear;
+    font-family: var(--fonte-primaria);
 } 
+.navbar {
+    background-color: #fff; /* ou uma cor escura */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* opcional para um leve sombreamento */
+}
 
 html.dark body {
     background-color: #232c35;
@@ -71,6 +77,17 @@ html.dark body .form-control::placeholder{
     color: #f0ffff94;
 }
 
+html.dark body section .btn-custom{
+    width: auto;
+    padding: 10px 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    color: #2b134b;
+    background:#f1c40f ;
+    box-shadow: 0px 10px 40px -12px #f1c40f;  
+}
 html.dark body .form-container .btn-custom{
     width: 100%;
     padding: 16px 0px;
@@ -97,7 +114,18 @@ html.dark body .form-secundario .btn-custom{
 }
 
 html.dark body .modal-content{
-    width: 100%;
+    padding: 16px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #f1c40f;
+    background:#333e49 !important;
+    box-shadow: 0px 10px 40px -12px #2b134b;
+}
+
+html.dark body .offcanvas{
     padding: 16px 0px;
     margin-top: 25px;
     margin-bottom: 25px;

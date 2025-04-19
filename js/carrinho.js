@@ -4,6 +4,20 @@ const cartTotal = document.getElementById('cart-total');
 
 let cart = [];
 
+// Salva o carrinho no localStorage
+function salvarCarrinho() {
+    localStorage.setItem('carrinho', JSON.stringify(cart));
+}
+
+// Carrega o carrinho do localStorage
+function carregarCarrinho() {
+    const carrinhoSalvo = localStorage.getItem('carrinho');
+    if (carrinhoSalvo) {
+        cart = JSON.parse(carrinhoSalvo);
+    }
+    updateCartDisplay();
+}
+
 function updateCartDisplay() {
     cartItemsContainer.innerHTML = '';
 
@@ -11,6 +25,7 @@ function updateCartDisplay() {
         cartItemsContainer.innerHTML = '<p>Seu carrinho está vazio.</p>';
         cartSubtotal.textContent = '0,00';
         cartTotal.textContent = '0,00';
+        salvarCarrinho(); // salva mesmo que vazio
         return;
     }
 
@@ -38,6 +53,7 @@ function updateCartDisplay() {
 
     cartSubtotal.textContent = subtotal.toFixed(2);
     cartTotal.textContent = subtotal.toFixed(2);
+    salvarCarrinho();
 }
 
 function changeQuantity(index, delta) {
@@ -78,3 +94,36 @@ document.querySelectorAll(".add-to-cart-btn").forEach(button => {
         addToCart({ name, price, img });
     });
 });
+
+function validarpedido() {
+    if (cart.length === 0) {
+        alert("Seu carrinho está vazio. Adicione itens antes de finalizar o pedido.");
+        return false;
+    }
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    if (total < 50) {
+        alert("O pedido mínimo é de R$ 50,00.");
+        return false;
+    }
+
+    return true;
+}
+
+function finalizarpedido() {
+    if (!validarpedido()) return;
+
+    console.log("Pedido validado e pronto pra ser enviado", cart);
+
+    // Aqui você pode adicionar lógica de envio do pedido (API, WhatsApp, etc.)
+
+    alert("Pedido finalizado com sucesso!");
+
+    // Limpa carrinho após finalizar
+    cart = [];
+    localStorage.removeItem('carrinho');
+    updateCartDisplay();
+}
+
+// Carrega o carrinho ao iniciar a página
+carregarCarrinho();
